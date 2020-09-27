@@ -1,5 +1,7 @@
 # Simple-shop-management
-This is not my code. this code is from this web which provide open sources for new cording starter( https://code-projects.org/ ). endl;
+This is not my code. this code is from this web which provide open sources for new cording starter( https://code-projects.org/ ).
+all copyright is gotten by https://code-projects.org/ 
+
 we are student and we got this repository for studying, team project.
 
 from here, original README part.
