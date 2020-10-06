@@ -48,7 +48,7 @@ public:
             profit=profit +(sell-cost)*365;
 			}
            void file(); // 76번줄에 정의됨
-           void get();  // 바로 밑에 정의됨
+           void get();  // 54번줄 정의됨
 
 };
 void product::get()
@@ -83,18 +83,20 @@ f<< "\nproduct name: "<<name<< "\nproduct id: "<<id<<"\ncost price of product: "
 f.close();
 }
 
+/// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ 
 class staff:public virtual earn{
          protected:
          double salary;
          char post[12];
          char empid[10];
          int postquan;
-         void cal()
+         void cal() 
          {
 		 profit=(profit-salary*postquan)*12;
          }
-         void getstaff();  //96 번줄에 정의
-         void file();
+         void getstaff();  //101 번줄에 정의
+         void file();  //117번줄 정의
 };
 void staff::getstaff()
 {
@@ -108,8 +110,8 @@ void staff::getstaff()
   	cin>>post;
   cout<<"\ninput employee ID\n";
   cin>>empid;
-  cal();
-  file();
+  cal();  //94번줄 정의
+  file();  //117번줄 정의
 }
 }
  void staff::file()
@@ -121,13 +123,15 @@ f<< "\nnumber of working employees: "<<postquan<< "\nemployee salary: "<<salary<
 f.close();
 }
 
+ //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 class amount:public staff, public product
 {
 
  public:
-    void add();          // 133 번줄 정의
-    void update_item();  // 162 번줄 정의
-    void update_emp();   // 195 번줄 정의
+    void add();          // 137 번줄 정의
+    void update_item();  // 166 번줄 정의
+    void update_emp();   // 199 번줄 정의
 
 };
 void amount::add()
@@ -212,6 +216,8 @@ void amount::add()
  	fout.close();
 }
 
+   // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 void admin()
 {
   while(1)
@@ -228,7 +234,7 @@ if(u==1)
   {
   amount a;
   a.show();  // 21번줄 정의
-  a.add();   // 133번줄 정의
+  a.add();   // 137번줄 정의
 }
   else if(u==2)
   {
@@ -250,7 +256,7 @@ if(u==1)
     	cout<<"file couldn't be opened. product ID not found. \n";
 	}
     while(x)
-    {x.get(c);   //54번줄 정의
+    {x.get(c);   // istream에 포함되어 있는 기능
      cout<<c;
     }
     
@@ -273,7 +279,7 @@ if(u==1)
 	}
    	while(y)
    	{
-   	y.get(d);   //54번줄 정의
+   	y.get(d);   // istream에 포함되어 있는 기능
    	cout<<d;
    }
  
@@ -282,12 +288,12 @@ if(u==1)
 else if(u==5)
 {
 	amount u;
-	u.update_item();  // 162번줄 정의
+	u.update_item();  // 166번줄 정의
 }
  else if(u==6)
  {
  	amount v;
- 	v.update_emp();  // 195번줄 정의
+ 	v.update_emp();  // 199번줄 정의
  }
   else if(u==7)
   {
@@ -297,6 +303,8 @@ else if(u==5)
  }
 
 }
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 int main(){
     int ch;
@@ -315,7 +323,7 @@ int main(){
         cin>>ch;
         switch(ch){
             case 1:
-                admin(); // 215번줄에 정의
+                admin(); // 221번줄에 정의
                 break;
             case 2:
                 exit(0);
