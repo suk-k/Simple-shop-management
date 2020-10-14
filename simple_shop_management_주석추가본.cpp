@@ -1,15 +1,15 @@
-#include<fstream> // ÀÌ Å¬·¡½ºÀÇ ¿ÀºêÁ§Æ®´Â ÆÄÀÏ¹öÇÁ °´Ã¼¸¦ ³»ºÎ ½ºÆ®¸² ¹öÆÛ·Î À¯Áö, ÀÌ ¹öÆÛ°¡ ¿¬°áµÈ ÆÄÀÏ(ÀÖ´Â °æ¿ì)¿¡¼­ ÀÔ·Â/Ãâ·Â ÀÛ¾÷ ¼öÇà.
-#include<iostream> // (±âº») ¹®ÀÚ ½ÃÄö½ºÀÇ ÀÔ·ÂÀ» ÀĞ°í ÇØ¼® °¡´É
-#include<string> // ¹®ÀÚ¿­À» ´ã´Â Å¬·¡½º 
-#include<cstdlib> // µ¿Àû ¸Ş¸ğ¸® °ü¸®, ³­¼ö »ı¼º, È¯°æ°úÀÇ Åë½Å, Á¤¼ö»ê¼ú, °Ë»ö, Á¤·Ä ¹× º¯È¯À» Æ÷ÇÔÇÑ ¸î °¡Áö ¹ü¿ë ±â´ÉÀ» Á¤ÀÇ
-#include <cstring> // C ¹®ÀÚ¿­°ú ¹è¿­À» Á¶ÀÛÇÏ´Â ¸î °¡Áö ±â´ÉÀ» Á¤ÀÇ
+#include<fstream> // ì´ í´ë˜ìŠ¤ì˜ ì˜¤ë¸Œì íŠ¸ëŠ” íŒŒì¼ë²„í”„ ê°ì²´ë¥¼ ë‚´ë¶€ ìŠ¤íŠ¸ë¦¼ ë²„í¼ë¡œ ìœ ì§€, ì´ ë²„í¼ê°€ ì—°ê²°ëœ íŒŒì¼(ìˆëŠ” ê²½ìš°)ì—ì„œ ì…ë ¥/ì¶œë ¥ ì‘ì—… ìˆ˜í–‰.
+#include<iostream> // (ê¸°ë³¸) ë¬¸ì ì‹œí€€ìŠ¤ì˜ ì…ë ¥ì„ ì½ê³  í•´ì„ ê°€ëŠ¥
+#include<string> // ë¬¸ìì—´ì„ ë‹´ëŠ” í´ë˜ìŠ¤ 
+#include<cstdlib> // ë™ì  ë©”ëª¨ë¦¬ ê´€ë¦¬, ë‚œìˆ˜ ìƒì„±, í™˜ê²½ê³¼ì˜ í†µì‹ , ì •ìˆ˜ì‚°ìˆ , ê²€ìƒ‰, ì •ë ¬ ë° ë³€í™˜ì„ í¬í•¨í•œ ëª‡ ê°€ì§€ ë²”ìš© ê¸°ëŠ¥ì„ ì •ì˜
+#include <cstring> // C ë¬¸ìì—´ê³¼ ë°°ì—´ì„ ì¡°ì‘í•˜ëŠ” ëª‡ ê°€ì§€ ê¸°ëŠ¥ì„ ì •ì˜
 
-#include<stdio.h>           // C ¾ğ¾îÀÇ Ç¥ÁØ ¶óÀÌºê·¯¸® ÇÔ¼öÀÇ ¸ÅÅ©·Î Á¤ÀÇ, »ó¼ö, ¿©·¯ ÇüÀÇ ÀÔÃâ·Â ÇÔ¼ö°¡ Æ÷ÇÔµÈ Çì´õ ÆÄÀÏ
+#include<stdio.h>           // C ì–¸ì–´ì˜ í‘œì¤€ ë¼ì´ë¸ŒëŸ¬ë¦¬ í•¨ìˆ˜ì˜ ë§¤í¬ë¡œ ì •ì˜, ìƒìˆ˜, ì—¬ëŸ¬ í˜•ì˜ ì…ì¶œë ¥ í•¨ìˆ˜ê°€ í¬í•¨ëœ í—¤ë” íŒŒì¼
 using namespace std;
 class file{
 public:
     file(){
-        ofstream fout;           // ofsream: ÆÄÀÏ ¾²±â ±â´É(ifstream: ÆÄÀÏ ÀĞ±â) // https://blockdmask.tistory.com/322
+        ofstream fout;           // ofsream: íŒŒì¼ ì“°ê¸° ê¸°ëŠ¥(ifstream: íŒŒì¼ ì½ê¸°) // https://blockdmask.tistory.com/322
         fout.open("anish.txt");  
         fout<<"anish";
         fout.close();
@@ -20,7 +20,7 @@ class earn{
         double profit;
         void show()
 		{
-		ifstream x("ooo.txt");    // ifstream: À§ ÁÖ¼® Âü°í
+		ifstream x("ooo.txt");    // ifstream: ìœ„ ì£¼ì„ ì°¸ê³ 
         if(!x)
         cout<<"PROFIT = 0 ";
         else{
@@ -50,8 +50,8 @@ public:
         	sell=persell*quan;
             profit=profit +(sell-cost)*365;
 			}
-           void file(); // 76¹øÁÙ¿¡ Á¤ÀÇµÊ
-           void get();  // 54¹øÁÙ Á¤ÀÇµÊ
+           void file(); // 76ë²ˆì¤„ì— ì •ì˜ë¨
+           void get();  // 54ë²ˆì¤„ ì •ì˜ë¨
 
 };
 void product::get()
@@ -71,8 +71,8 @@ for(int i=0;i<s;i++)
   cin>>persell;
   cout<<"\ntotal product quantity: \n";
   cin>>quan;
-    cal();     // 44¹øÁÙ¿¡ Á¤ÀÇµÊ
-    file();    // 76¹øÁÙ¿¡ Á¤ÀÇµÊ
+    cal();     // 44ë²ˆì¤„ì— ì •ì˜ë¨
+    file();    // 76ë²ˆì¤„ì— ì •ì˜ë¨
   }
  
 }
@@ -82,7 +82,8 @@ char file[20];
 strcpy(file,id);
 strcat(file,".txt");
 ofstream f(file);
-f<< "\nproduct name: "<<name<< "\nproduct id: "<<id<<"\ncost price of product: " <<percost<<"\nselling price of product: "<<persell<<"\nquantity: "<<quan<<"\n total cost: "<<cost<<"\nsell: "<<sell;
+f<< "\nproduct name: "<<name<< "\nproduct id: "<<id<<"\ncost price of product: " <<percost<<"\nselling price of product: "
+	<<persell<<"\nquantity: "<<quan<<"\n total cost: "<<cost<<"\nsell: "<<sell;
 f.close();
 }
 
@@ -97,8 +98,8 @@ class staff:public virtual earn{
          {
 		 profit=(profit-salary*postquan)*12;
          }
-         void getstaff();  //101 ¹øÁÙ¿¡ Á¤ÀÇ
-         void file();  //117¹øÁÙ Á¤ÀÇ
+         void getstaff();  //101 ë²ˆì¤„ì— ì •ì˜
+         void file();  //117ë²ˆì¤„ ì •ì˜
 };
 void staff::getstaff()
 {
@@ -112,8 +113,8 @@ void staff::getstaff()
   	cin>>post;
   cout<<"\ninput employee ID\n";
   cin>>empid;
-  cal();  //94¹øÁÙ Á¤ÀÇ
-  file();  //117¹øÁÙ Á¤ÀÇ
+  cal();  //94ë²ˆì¤„ ì •ì˜
+  file();  //117ë²ˆì¤„ ì •ì˜
 }
 }
  void staff::file()
@@ -131,9 +132,9 @@ class amount:public staff, public product
 {
 
  public:
-    void add();          // 137 ¹øÁÙ Á¤ÀÇ
-    void update_item();  // 166 ¹øÁÙ Á¤ÀÇ
-    void update_emp();   // 199 ¹øÁÙ Á¤ÀÇ
+    void add();          // 137 ë²ˆì¤„ ì •ì˜
+    void update_item();  // 166 ë²ˆì¤„ ì •ì˜
+    void update_emp();   // 199 ë²ˆì¤„ ì •ì˜
 
 };
 void amount::add()
@@ -235,13 +236,13 @@ void admin()
 if(u==1)
   {
   amount a;
-  a.show();  // 21¹øÁÙ Á¤ÀÇ
-  a.add();   // 137¹øÁÙ Á¤ÀÇ
+  a.show();  // 21ë²ˆì¤„ ì •ì˜
+  a.add();   // 137ë²ˆì¤„ ì •ì˜
 }
   else if(u==2)
   {
   amount d;
-  d.show();  // 21¹øÁÙ Á¤ÀÇ
+  d.show();  // 21ë²ˆì¤„ ì •ì˜
 }
   else if(u==3)
   {  
@@ -258,7 +259,7 @@ if(u==1)
     	cout<<"file couldn't be opened. product ID not found. \n";
 	}
     while(x)
-    {x.get(c);   // istream¿¡ Æ÷ÇÔµÇ¾î ÀÖ´Â ±â´É
+    {x.get(c);   // istreamì— í¬í•¨ë˜ì–´ ìˆëŠ” ê¸°ëŠ¥
      cout<<c;
     }
     
@@ -281,7 +282,7 @@ if(u==1)
 	}
    	while(y)
    	{
-   	y.get(d);   // istream¿¡ Æ÷ÇÔµÇ¾î ÀÖ´Â ±â´É
+   	y.get(d);   // istreamì— í¬í•¨ë˜ì–´ ìˆëŠ” ê¸°ëŠ¥
    	cout<<d;
    }
  
@@ -290,12 +291,12 @@ if(u==1)
 else if(u==5)
 {
 	amount u;
-	u.update_item();  // 166¹øÁÙ Á¤ÀÇ
+	u.update_item();  // 166ë²ˆì¤„ ì •ì˜
 }
  else if(u==6)
  {
  	amount v;
- 	v.update_emp();  // 199¹øÁÙ Á¤ÀÇ
+ 	v.update_emp();  // 199ë²ˆì¤„ ì •ì˜
  }
   else if(u==7)
   {
@@ -325,7 +326,7 @@ int main(){
         cin>>ch;
         switch(ch){
             case 1:
-                admin(); // 221¹øÁÙ¿¡ Á¤ÀÇ
+                admin(); // 221ë²ˆì¤„ì— ì •ì˜
                 break;
             case 2:
                 exit(0);
