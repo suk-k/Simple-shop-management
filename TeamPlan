@@ -1,0 +1,64 @@
+TEAM PROJECT PLAN
+: SHOPMANAGEMENT
+
+20173477 김수경
+20193514 김보명
+20193490 김성주
+20173528 최호준
+
+
+-GOAL-
+
+MAKE A NEW FUNCTION OR CLASS
+WHICH IS HELPING THE SHOP MANAGER
+
+
+PROJECT TIMELINE
+
+4~5th Week : Picking up the open source
+6~10th Week : Analysis the codes
+11~12th Week : Analysis the design pattern
+13~14th Week : Making a New function or class
+
+
+About Team Cooperation
+
+We have two conferences on every weeks.
+At the First conferences, 
+leader gives a part of code to every member of team.
+And next, we have some time to analysis the codes
+and report each personal researching’s results.
+And share some question, solve the problem together.
+
+
+Distributing roles
+  
+  (조장) 김수경
+  Leading a team meeting And orientation settings
+  Writing team meeting minutes, team plan, presentation
+ 
+  김보명
+  Report writing
+
+  김성주
+  Producing presentation ppt
+  
+  최호준
+  Report writing
+  
+  (공통)
+  Feedback between team members
+  Personal code analysis and report
+
+
+About Shop Management’s classes and functions
+
+1. Managing of products
+2. Managing  information of empolyees
+3. Exact calculation
+
+
+Expecting
+
+1. A new management function
+2. Member management
